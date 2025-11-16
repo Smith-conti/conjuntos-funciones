@@ -18,6 +18,7 @@
         <button name="opcion" value="difA" class="btn btn-warning m-1">Diferencia A - B</button>
         <button name="opcion" value="difB" class="btn btn-warning m-1">Diferencia B - A</button>
         <button name="opcion" value="inter" class="btn btn-success m-1">Intersección</button>
+        <a href="/" class="btn btn-secondary m-1">Volver al menú</a>
     </form>
 
     {% if resultado %}
@@ -29,8 +30,6 @@
     {% if venn_image %}
         <img src="/static/{{ venn_image }}" class="img-fluid mt-3">
     {% endif %}
-
-    <a href="/" class="btn btn-secondary mt-4">Volver al menú</a>
 
 </div>
 </body>

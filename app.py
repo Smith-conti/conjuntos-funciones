@@ -25,7 +25,6 @@ def diferenciaA(): return A - B
 def diferenciaB(): return B - A
 def interseccion(): return A & B
 
-
 # ================================================
 #   FUNCIONES DIAGRAMAS VENN
 # ================================================
@@ -98,10 +97,10 @@ def caso1():
 
 
 # ================================================
-#   CASO 2 PAGINAS SEPARADAS
+#   CASO 2
 # ================================================
 
-@app.route("/caso2")
+@app.route("/caso2/f1")
 def caso2_menu():
     return render_template("caso2_f1.html")
 
@@ -165,7 +164,7 @@ def caso2_graf():
         y = x**2 + 2
 
         plt.plot(x, y)
-        plt.title("f(x) = x + 2")
+        plt.title("f(x) = x² + 2")
         plt.grid(True)
         plt.savefig("static/funcion.png")
         plt.close()
