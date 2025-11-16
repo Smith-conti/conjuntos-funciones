@@ -9,7 +9,7 @@ funciones utilizando una interfaz web moderna con **Flask**,
 Permite ejecutar:
 
 -   **Caso 1:** Operaciones entre conjuntos (con generación automática
-    de diagramas de Venn).\
+    de diagramas de Venn).
 -   **Caso 2:** Evaluación de funciones individualmente y generación
     dinámica de gráficas.
 
@@ -17,9 +17,9 @@ Permite ejecutar:
 
 ## 📌 Requisitos del sistema
 
--   ✔ Python **3.10 -- 3.12**\
--   ✔ Pip actualizado\
--   ✔ Git (opcional pero recomendado)
+-   Python **3.10 -- 3.12**
+-   Pip actualizado
+-   Git (opcional pero recomendado)
 
 ------------------------------------------------------------------------
 
@@ -27,7 +27,6 @@ Permite ejecutar:
 
 ``` bash
 git clone https://github.com/usuario/tu-repositorio.git
-cd tu-repositorio
 ```
 
 ------------------------------------------------------------------------
@@ -66,16 +65,7 @@ pip3 install -r requirements.txt
 
 ------------------------------------------------------------------------
 
-## 📚 4. Archivo `requirements.txt` recomendado
-
-    Flask
-    matplotlib
-    matplotlib-venn
-    numpy
-
-------------------------------------------------------------------------
-
-## ▶️ 5. Ejecutar la aplicación localmente
+## ▶️ 4. Ejecutar la aplicación localmente
 
 Con el entorno virtual activo:
 
@@ -97,7 +87,7 @@ El servidor iniciará en:
 
 ------------------------------------------------------------------------
 
-## 🖼 6. Archivos generados
+## 🖼 5. Archivos generados
 
 Las imágenes generadas (diagramas de Venn y gráficas) se guardan
 automáticamente en:
@@ -120,12 +110,10 @@ deactivate
     │── app.py
     │── requirements.txt
     │── static/
-    │     ├── venn.png
-    │     └── funcion.png
+    │     └── Imagenes generados
     │── templates/
     │     ├── index.html
     │     ├── caso1.html
-    │     ├── caso2_menu.html
     │     ├── caso2_f1.html
     │     ├── caso2_f2.html
     │     ├── caso2_comp.html
@@ -135,16 +123,6 @@ deactivate
 ------------------------------------------------------------------------
 
 ## ⚙️ Notas importantes
-
-### 🔹 Problemas con Tkinter
-
-Este proyecto usa Matplotlib con backend no interactivo.\
-Asegúrate de incluir al inicio de `app.py`:
-
-``` python
-import matplotlib
-matplotlib.use('Agg')
-```
 
 ### 🔹 Si pip3 no está instalado (Linux)
 
