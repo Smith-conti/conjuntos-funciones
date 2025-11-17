@@ -2,3 +2,4 @@ Flask
 matplotlib
 matplotlib-venn
 numpy
+gunicorn

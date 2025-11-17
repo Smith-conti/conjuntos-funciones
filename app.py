@@ -10,14 +10,16 @@ import os
 app = Flask(__name__)
 
 # ================================================
-#   DEFINICIÓN DE CONJUNTOS A Y B
+#   CASO 1
 # ================================================
+
+#   DEFINICIÓN DE CONJUNTOS A Y B
+
 A = set([1,2,3,4,-4,-5,-6,23,25,27,100,200,240,240])
 B = set([-4,-5,-6,300,400,600,500,500])
 
-# ================================================
 #   FUNCIONES OPERACIONES ENTRE CONJUNTOS
-# ================================================
+
 def cardinalA(): return len(A)
 def cardinalB(): return len(B)
 def union(): return A | B
@@ -25,9 +27,8 @@ def diferenciaA(): return A - B
 def diferenciaB(): return B - A
 def interseccion(): return A & B
 
-# ================================================
 #   FUNCIONES DIAGRAMAS VENN
-# ================================================
+
 def generar_venn(op, titulo):
     plt.figure(figsize=(6,6))
     v = venn2([A, B], set_labels=('A', 'B'))
@@ -56,13 +57,11 @@ def generar_venn(op, titulo):
     plt.savefig(img_path)
     plt.close()
 
-# ================================================
 #   RUTAS DEL SISTEMA
-# ================================================
+
 @app.route("/")
 def index():
     return render_template("index.html")
-
 
 @app.route("/caso1", methods=["GET", "POST"])
 def caso1():
@@ -104,7 +103,6 @@ def caso1():
 def caso2_menu():
     return render_template("caso2_f1.html")
 
-
 @app.route("/caso2/f1", methods=["GET", "POST"])
 def caso2_f1():
     resultado = None
@@ -115,7 +113,6 @@ def caso2_f1():
         resultado = f"f(x) = {f1(x)}"
     
     return render_template("caso2_f1.html", resultado=resultado)
-
 
 @app.route("/caso2/f2", methods=["GET", "POST"])
 def caso2_f2():
@@ -128,7 +125,6 @@ def caso2_f2():
         resultado = f"f(x,y) = {f2(x, y)}"
     
     return render_template("caso2_f2.html", resultado=resultado)
-
 
 @app.route("/caso2/compuesta", methods=["GET", "POST"])
 def caso2_comp():
@@ -154,7 +150,6 @@ def caso2_comp():
         f=f_val
     )
 
-
 @app.route("/caso2/grafica", methods=["GET", "POST"])
 def caso2_graf():
     grafica = None
@@ -172,8 +167,7 @@ def caso2_graf():
         grafica = "funcion.png"
 
     return render_template("caso2_graf.html", grafica=grafica)
-
-
+    
 
 if __name__ == "__main__":
     app.run(debug=True)
